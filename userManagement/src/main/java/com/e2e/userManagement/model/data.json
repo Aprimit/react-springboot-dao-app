@@ -1,0 +1,36 @@
+[ {
+  "username" : "aprimit2202@gmail.com",
+  "firstname" : "Aprimit",
+  "lastname" : "Garg",
+  "organization" : "ABC",
+  "department" : "XYZ",
+  "designation" : "MNO"
+}, {
+  "username" : "pqrs@gmail.com",
+  "firstname" : "Alok",
+  "lastname" : "Nath",
+  "organization" : "ABC",
+  "department" : "XYZ",
+  "designation" : "MNO"
+}, {
+  "username" : "mike.ross@pearson.com",
+  "firstname" : "Mike",
+  "lastname" : "Ross",
+  "organization" : "Pearson Hardman",
+  "department" : "Law",
+  "designation" : "Associate"
+}, {
+  "username" : "harvey.v@spearson.com",
+  "firstname" : "Harvey",
+  "lastname" : "V",
+  "organization" : "ABC",
+  "department" : "XYZ",
+  "designation" : "MNO"
+}, {
+  "username" : "Jessica@pearson.com",
+  "firstname" : "Jessica",
+  "lastname" : "P",
+  "organization" : "ABC",
+  "department" : "XYZ",
+  "designation" : "MNO"
+} ]
