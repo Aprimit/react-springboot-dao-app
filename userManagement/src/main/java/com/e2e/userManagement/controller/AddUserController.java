@@ -11,11 +11,11 @@ import com.e2e.userManagement.service.AddUserService;
 
 @RestController
 public class AddUserController {
-
+	
 	@Autowired
 	AddUserService addUserSvc;
 
-	@RequestMapping(method = RequestMethod.POST, value = "/addUser")
+	@RequestMapping(method = RequestMethod.POST, value = "${spring.application.name}/addUser")
 	public void addUser(@RequestBody UserPojo user) {
 		addUserSvc.addUser(user);
 	}

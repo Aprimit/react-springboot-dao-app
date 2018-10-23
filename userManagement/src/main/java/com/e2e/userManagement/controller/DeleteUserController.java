@@ -10,10 +10,11 @@ import com.e2e.userManagement.service.DeleteUserService;
 
 @RestController
 public class DeleteUserController {
+	
 	@Autowired
 	DeleteUserService deleteUserSvc;
 
-	@RequestMapping(value = "/deleteUser/{username}", method = RequestMethod.DELETE)
+	@RequestMapping(value = "${spring.application.name}/deleteUser/{username}", method = RequestMethod.DELETE)
 	public void deleteUser(@PathVariable String username) {
 		deleteUserSvc.deleteUser(username);
 	}

@@ -11,10 +11,11 @@ import com.e2e.userManagement.service.UpdateUserService;
 
 @RestController
 public class UpdateUserController {
+	
 	@Autowired
 	UpdateUserService updateUserSvc;
 
-	@RequestMapping(method = RequestMethod.PUT, value = "/updateUser")
+	@RequestMapping(method = RequestMethod.PUT, value = "${spring.application.name}/updateUser")
 	public void updateUser(@RequestBody UserPojo user) {
 		updateUserSvc.updateUser(user);
 	}
