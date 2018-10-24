@@ -6,13 +6,6 @@
   "department" : "XYZ",
   "designation" : "MNO"
 }, {
-  "username" : "pqrs@gmail.com",
-  "firstname" : "Alok",
-  "lastname" : "Nath",
-  "organization" : "ABC",
-  "department" : "XYZ",
-  "designation" : "MNO"
-}, {
   "username" : "mike.ross@pearson.com",
   "firstname" : "Mike",
   "lastname" : "Ross",
@@ -30,6 +23,13 @@
   "username" : "Jessica@pearson.com",
   "firstname" : "Jessica",
   "lastname" : "P",
+  "organization" : "ABC",
+  "department" : "XYZ",
+  "designation" : "MNO"
+}, {
+  "username" : "alok.nath@gmail.com",
+  "firstname" : "Alok",
+  "lastname" : "Kripa",
   "organization" : "ABC",
   "department" : "XYZ",
   "designation" : "MNO"

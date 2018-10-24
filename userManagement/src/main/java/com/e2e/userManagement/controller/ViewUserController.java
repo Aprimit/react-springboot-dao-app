@@ -17,12 +17,12 @@ public class ViewUserController {
 	@Autowired
 	ViewUserService viewUserSvc;
 
-	@RequestMapping(value = "/userManagement/getUser", method = RequestMethod.GET)
+	@RequestMapping(value = "userManagement/getUser", method = RequestMethod.GET)
 	public List<UserPojo> viewUsers() {
 		return viewUserSvc.getUsers();
 	}
 
-	@RequestMapping(value = "${spring.application.name}/getUser/{username}", method = RequestMethod.GET)
+	@RequestMapping(value = "userManagement/getUser/{username}", method = RequestMethod.GET)
 	public UserPojo viewUser(@PathVariable("username") String username) {
 		return viewUserSvc.getUser(username);
 	}
