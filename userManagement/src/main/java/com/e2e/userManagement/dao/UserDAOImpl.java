@@ -15,7 +15,7 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 public class UserDAOImpl implements UserDAO {
 
 	@Override
-	public void addUser(UserPojo user) {
+	public UserPojo addUser(UserPojo user) {
 		ObjectMapper objectMapper = new ObjectMapper();
 		List<UserPojo> users = getAllUsers();
 		users.add(user);
@@ -25,10 +25,11 @@ public class UserDAOImpl implements UserDAO {
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
+		return getUser(user.getUsername());
 	}
 
 	@Override
-	public void updateUser(UserPojo user) {
+	public UserPojo updateUser(UserPojo user) {
 		ObjectMapper objectMapper = new ObjectMapper();
 		List<UserPojo> users = getAllUsers();
 		int targetIndex = -1;
@@ -44,6 +45,7 @@ public class UserDAOImpl implements UserDAO {
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
+		return getUser(user.getUsername());
 	}
 
 	@Override
