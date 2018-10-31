@@ -11,7 +11,7 @@ public class AddUserService {
 	@Autowired
 	UserDAOImpl userDAOImpl;
 
-	public void addUser(UserPojo user) {
-		userDAOImpl.addUser(user);
+	public UserPojo addUser(UserPojo user) {
+		return userDAOImpl.addUser(user);
 	}
 }

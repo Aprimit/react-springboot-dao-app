@@ -16,7 +16,7 @@ public class UpdateUserController {
 	UpdateUserService updateUserSvc;
 
 	@RequestMapping(method = RequestMethod.PUT, value = "${spring.application.name}/updateUser")
-	public void updateUser(@RequestBody UserPojo user) {
-		updateUserSvc.updateUser(user);
+	public UserPojo updateUser(@RequestBody UserPojo user) {
+		return updateUserSvc.updateUser(user);
 	}
 }
