@@ -11,7 +11,7 @@ public class UpdateUserService {
 	@Autowired
 	UserDAOImpl userDAOImpl;
 
-	public void updateUser(UserPojo user) {
-		userDAOImpl.updateUser(user);
+	public UserPojo updateUser(UserPojo user) {
+		return userDAOImpl.updateUser(user);
 	}
 }

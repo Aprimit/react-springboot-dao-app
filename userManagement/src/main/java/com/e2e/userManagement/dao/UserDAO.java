@@ -5,9 +5,9 @@ import java.util.List;
 import com.e2e.userManagement.pojo.UserPojo;
 
 public interface UserDAO {
-	public void addUser(UserPojo user);
+	public UserPojo addUser(UserPojo user);
 
-	public void updateUser(UserPojo user);
+	public UserPojo updateUser(UserPojo user);
 
 	public void deleteUser(String username);
 
