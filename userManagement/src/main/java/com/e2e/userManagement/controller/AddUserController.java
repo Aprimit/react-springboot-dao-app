@@ -19,6 +19,6 @@ public class AddUserController {
 
 	@RequestMapping(method = RequestMethod.POST, value = "userManagement/addUser")
 	public ResponseEntity<?> addUser(@RequestBody UserPojo user) {
-		return new ResponseEntity<>(addUserSvc.addUser(user), HttpStatus.CREATED);
+		return new ResponseEntity<>(addUserSvc.save(user), HttpStatus.CREATED);
 	}
 }

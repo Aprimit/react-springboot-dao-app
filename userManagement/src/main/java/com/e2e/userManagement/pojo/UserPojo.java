@@ -1,15 +1,26 @@
 package com.e2e.userManagement.pojo;
 
-import org.springframework.stereotype.Component;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.Table;
 
-@Component
+/**
+ * @author Aprimit Garg
+ *
+ */
+@Entity
+@Table(name = "USERS")
 public class UserPojo {
+	@Id
 	private String username;
 	private String firstname;
 	private String lastname;
 	private String organization;
 	private String department;
 	private String designation;
+
+	public UserPojo() {
+	}
 
 	public String getUsername() {
 		return username;

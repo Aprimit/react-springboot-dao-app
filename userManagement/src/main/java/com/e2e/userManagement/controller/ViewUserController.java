@@ -1,6 +1,7 @@
 package com.e2e.userManagement.controller;
 
 import java.util.List;
+import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -31,7 +32,7 @@ public class ViewUserController {
 	@RequestMapping(value = "userManagement/getUser/{username}", method = RequestMethod.GET)
 	public ResponseEntity<?> viewUser(@PathVariable("username") String username) {
 		HttpStatus status = HttpStatus.OK;
-		UserPojo user = viewUserSvc.getUser(username);
+		Optional<UserPojo> user = viewUserSvc.findUser(username);
 		if (user == null)
 			status = HttpStatus.NO_CONTENT;
 		return new ResponseEntity<>(user, status);
