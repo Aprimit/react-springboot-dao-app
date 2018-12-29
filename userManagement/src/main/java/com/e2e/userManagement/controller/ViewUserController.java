@@ -1,6 +1,5 @@
 package com.e2e.userManagement.controller;
 
-import java.util.List;
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -14,6 +13,10 @@ import org.springframework.web.bind.annotation.RestController;
 import com.e2e.userManagement.pojo.UserPojo;
 import com.e2e.userManagement.service.ViewUserService;
 
+/**
+ * @author Aprimit Garg
+ *
+ */
 @RestController
 public class ViewUserController {
 
@@ -23,9 +26,9 @@ public class ViewUserController {
 	@RequestMapping(value = "userManagement/getUser", method = RequestMethod.GET)
 	public ResponseEntity<?> viewUsers() {
 		HttpStatus status = HttpStatus.OK;
-		List<UserPojo> users = viewUserSvc.getUsers();
-		if (users.isEmpty())
-			status = HttpStatus.NO_CONTENT;
+		Iterable<UserPojo> users = viewUserSvc.findAll();
+//		if (users.isEmpty())
+//			status = HttpStatus.NO_CONTENT;
 		return new ResponseEntity<>(users, status);
 	}
 

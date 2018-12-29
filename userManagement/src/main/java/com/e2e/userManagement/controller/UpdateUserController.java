@@ -11,6 +11,10 @@ import org.springframework.web.bind.annotation.RestController;
 import com.e2e.userManagement.pojo.UserPojo;
 import com.e2e.userManagement.service.UpdateUserService;
 
+/**
+ * @author Aprimit Garg
+ *
+ */
 @RestController
 public class UpdateUserController {
 

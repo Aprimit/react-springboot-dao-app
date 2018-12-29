@@ -7,11 +7,16 @@ import com.e2e.userManagement.dao.UserDAOImpl;
 import com.e2e.userManagement.persistence.UserRepository;
 import com.e2e.userManagement.pojo.UserPojo;
 
+/**
+ * @author Aprimit Garg
+ *
+ */
 @Service
 public class AddUserService {
 	@Autowired
 	UserRepository userRepo;
 
+	/* Plain Old DAO */
 	@Autowired
 	UserDAOImpl userDAOImpl;
 
