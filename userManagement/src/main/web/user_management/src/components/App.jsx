@@ -2,32 +2,47 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import logo from './../logo.svg';
 import './../App.css';
-import Profile from './Profile'
-import AddProfile from './AddProfile';
+import User from './User'
+import AddUser from './AddUser';
+import { getUsers } from './../utils/userApi';
 
 class App extends React.Component {
   constructor(props) {
     super(props)
     this.state = {
-      profiles: [{ "name": "A1", "description": "Test Profile 1" }, { "name": "A2", "description": "Test Profile 2" }]
+      users: []
     }
-    this.addProfile = this.addProfile.bind(this);
+    this.addUser = this.addUser.bind(this);
   }
-  addProfile(newProfile) {
-    this.setState({ profiles: this.state.profiles.concat([newProfile]) })
+  addUser(newUser) {
+    this.setState({ Users: this.state.users.concat([newUser]) })
   }
+  // componentDidMount() {
+  //   getUsers().then(users => {
+  //     this.setState({
+  //       users: users
+  //     })
+  //     console.log(users)
+  //   }).catch(err => console.log(err))
+  // }
   render() {
-    let profiles = this.state.profiles.map(profile => {
+    getUsers().then(users => {
+      this.setState({
+        users: users
+      })
+      console.log(users)
+    }).catch(err => console.log(err))
+    let Users = this.state.users.map(user => {
       return (
-        <Profile name={profile.name} desc={profile.description} />
+        <User username={user.username} firstname={user.firstname} />
       );
     })
     return (
       <div className="App">
         <header className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
-          {profiles}
-          <AddProfile addProfile={this.addProfile}></AddProfile>
+          {Users}
+          <AddUser addUser={this.addUser}></AddUser>
           <br />
           <a
             className="App-link"
